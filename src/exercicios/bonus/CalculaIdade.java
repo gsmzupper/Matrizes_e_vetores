@@ -1,4 +1,4 @@
-package exerciciobonos;
+package exercicios.bonus;
 
 import java.time.LocalDate;
 import java.time.Period;

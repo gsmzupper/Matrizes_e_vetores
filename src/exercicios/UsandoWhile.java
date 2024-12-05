@@ -1,3 +1,5 @@
+package exercicios;
+
 public class UsandoWhile {
     public static void main(String[] args) {
         int[] vetorUniDimencional = {10, 20, 15, 4, 75};
