@@ -15,13 +15,18 @@ public class CalculaIdade {
         System.out.println("Digite a data do seu nascimento: formato (YY-MM-DD).");
         String dataNascimento = sc.nextLine();
 
-        LocalDate converteDataNascimento = LocalDate.parse(dataNascimento);
+        try {
+            LocalDate converteDataNascimento = LocalDate.parse(dataNascimento);
 
-        LocalDate dataAtual = LocalDate.now();
+            LocalDate dataAtual = LocalDate.now();
 
-        int idadeCalculada = Period.between(converteDataNascimento, dataAtual).getYears();
+            int idadeCalculada = Period.between(converteDataNascimento, dataAtual).getYears();
 
-        System.out.printf("\nOlá! %s você tem %d anos de idade.", name, idadeCalculada);
-        sc.close();
+            System.out.printf("\nOlá! %s você tem %d anos de idade.", name, idadeCalculada);
+        } catch (Exception e) {
+            System.out.println("Erro: Certifique-se de inserir a data no formato correto (yyyy-MM-dd).");
+        } finally {
+            sc.close();
+        }
     }
 }
